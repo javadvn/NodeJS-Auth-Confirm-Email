@@ -6,7 +6,7 @@ const registerController = {
        
         const checkUseremail = await userModel.findOne({ email });
         if (checkUseremail)
-            return res.status(400).json({ message: "This email is already available!" });
+            return res.status(400).json({ message: "This email is already used!" });
 
         const newUser = new userModel({
             name: req.body.name,

@@ -27,14 +27,14 @@ function App() {
           );
           setUser(res.data.message === "Success" ? true : false);
         }
-        setLoading(false); // Yüklenme durumunu güncelle
+        setLoading(false); 
       };
   
       fetchData();
     }, []);
   
     if (loading) {
-      return <div>Loading...</div>; // Yüklenme durumunda bekleyen bir bileşen göster
+      return <div>Loading...</div>; 
     }
   return (
     <Routes>
